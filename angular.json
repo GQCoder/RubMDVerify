@@ -20,9 +20,11 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "data.json", "input": "./", "output": "./assets/data/eConsult/" }
             ],
             "styles": [
+              "/Users/GQ/WebstormProjects/RubMDVerify/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row verifi-box-container">
+    <div class="col-4">
+      <div class="image-container" [ngClass]="{'grayscale' : data.reviewed}"><img src="{{imgSrc}}"></div>
+      <div class="checkmark-container"><i *ngIf="data.reviewed" class="fas fa-check"></i></div>
+    </div>
+    <div class="col-4 button-container">
+      <button class="btn btn-secondary" (click)="reviewCompleted()"  *ngIf="!data.reviewed">No redaction needed</button>
+    </div>
+    <div class="col-4 button-container">
+      <button class="btn btn-secondary" (click)="redact()" *ngIf="!data.reviewed">Redact</button>
+    </div>
+  </div>
+</div>

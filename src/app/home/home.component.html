@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class="container">
+  <div *ngFor="let eConsult of eConsultData">
+    <label>eConsult #{{ eConsult.id }}</label>
+    <div *ngFor="let attachment of eConsult.attachments">
+      <app-verifi-box [data]="attachment" [eConsultId]="eConsult.id"></app-verifi-box>
+    </div>
+  </div>
+</div>
+
